@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import Bar from "./Bar";
 
 it("renders without crashing", () => {
@@ -26,7 +26,7 @@ it("renders the percentage", () => {
     { value: 235, limit: 230, percentage: "102%" }
   ];
   for (const t of tests) {
-    const wrapper = shallow(<Bar value={t.value} limit={t.limit} />);
+    const wrapper = mount(<Bar value={t.value} limit={t.limit} />);
     expect(wrapper.text()).toEqual(t.percentage);
   }
 });

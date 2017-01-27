@@ -1,4 +1,30 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+
+const height = "2.5rem";
+
+const Wrapper = styled.div`
+  background: #fafafa;
+  height: ${height};
+  position: relative;
+`;
+
+const Progress = styled.div`
+  background: ${props => props.full ? "#d9534f" : "#eaeaea"};
+  height: ${height};
+  transition: width 0.5s, background-color 0.5s;
+`;
+
+const Text = styled.div`
+  color: ${props => props.full ? "#fff" : "#313131"};
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: ${height};
+`;
 
 class Bar extends Component {
   percentage() {
@@ -10,10 +36,15 @@ class Bar extends Component {
   }
 
   render() {
+    const p = this.percentage();
+    const full = p >= 100;
+
     return (
-      <div>
-        {`${this.percentage()}%`}
-      </div>
+      <Wrapper>
+        <Progress full={full} style={{ width: full ? "100%" : `${p}%` }}>
+          <Text full={full}>{`${p}%`}</Text>
+        </Progress>
+      </Wrapper>
     );
   }
 }
