@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import Button from "./Button";
 
 function noop() {
@@ -22,7 +22,7 @@ it("renders the label", () => {
     { delta: -230, label: "-230" }
   ];
   for (const t of tests) {
-    const wrapper = shallow(<Button delta={t.delta} onClick={noop} />);
+    const wrapper = mount(<Button delta={t.delta} onClick={noop} />);
     expect(wrapper.text()).toEqual(t.label);
   }
 });
@@ -32,7 +32,7 @@ it("triggers the click handler", () => {
   function handleClick() {
     triggered = true;
   }
-  const wrapper = shallow(<Button delta={-50} onClick={handleClick} />);
+  const wrapper = mount(<Button delta={-50} onClick={handleClick} />);
   expect(triggered).toEqual(false);
   wrapper.find("button").simulate("click");
   expect(triggered).toEqual(true);

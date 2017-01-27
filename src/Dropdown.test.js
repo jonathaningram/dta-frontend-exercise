@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { render, shallow } from "enzyme";
+import { mount, render } from "enzyme";
 import Dropdown from "./Dropdown";
 
 function noop() {
@@ -37,7 +37,7 @@ it("triggers the change handler", () => {
     triggered = true;
     value = v;
   }
-  const wrapper = shallow(
+  const wrapper = mount(
     <Dropdown value={0} bars={[ 53, 63 ]} onChange={onChange} />
   );
   expect(triggered).toEqual(false);
