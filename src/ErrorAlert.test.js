@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import ErrorAlert from "./ErrorAlert";
 
 it("renders without crashing", () => {
@@ -14,7 +14,7 @@ it("renders the message", () => {
     { message: "Another error message." }
   ];
   for (const t of tests) {
-    const wrapper = shallow(<ErrorAlert message={t.message} />);
+    const wrapper = mount(<ErrorAlert message={t.message} />);
     expect(wrapper.text()).toEqual(t.message);
   }
 });
