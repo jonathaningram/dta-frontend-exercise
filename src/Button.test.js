@@ -29,10 +29,10 @@ it("renders the label", () => {
 
 it("triggers the click handler", () => {
   let triggered = false;
-  function onClick() {
+  function handleClick() {
     triggered = true;
   }
-  const wrapper = shallow(<Button delta={-50} onClick={onClick} />);
+  const wrapper = shallow(<Button delta={-50} onClick={handleClick} />);
   expect(triggered).toEqual(false);
   wrapper.find("button").simulate("click");
   expect(triggered).toEqual(true);

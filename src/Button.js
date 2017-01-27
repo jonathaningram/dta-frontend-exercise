@@ -4,10 +4,10 @@ class Button extends Component {
   constructor(props) {
     super(props);
 
-    this.onClick = this.onClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  onClick(e) {
+  handleClick(e) {
     const { delta } = this.props;
     this.props.onClick(delta);
   }
@@ -16,7 +16,7 @@ class Button extends Component {
     const { delta } = this.props;
     const prefix = delta < 0 ? "" : "+";
     return (
-      <button type="button" onClick={this.onClick}>
+      <button type="button" onClick={this.handleClick}>
         {`${prefix}${delta}`}
       </button>
     );
