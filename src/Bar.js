@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 
 class Bar extends Component {
-  render() {
+  percentage() {
     const { value, limit } = this.props;
-    let percentage;
-    if (limit > 0) {
-      percentage = (value / limit * 100).toFixed(0);
-    } else {
-      percentage = 0;
+    if (limit <= 0 || value <= 0) {
+      return 0;
     }
+    return (value / limit * 100).toFixed(0);
+  }
 
+  render() {
     return (
       <div>
-        {`${percentage}%`}
+        {`${this.percentage()}%`}
       </div>
     );
   }
