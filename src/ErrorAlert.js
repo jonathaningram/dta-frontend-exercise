@@ -1,12 +1,21 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+import Text from "./Text";
+
+const Wrapper = styled.div`
+  padding: 1rem;
+  background: papayawhip;
+`;
 
 class ErrorAlert extends Component {
   render() {
     const { message } = this.props;
     return (
-      <div>
-        {message}
-      </div>
+      <Wrapper>
+        <Text>
+          {message}
+        </Text>
+      </Wrapper>
     );
   }
 }
