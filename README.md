@@ -47,7 +47,7 @@ Deploy to Google App Engine (assumes that GAE tools and SDKs are installed).
 appcfg.py -A "dta-frontend-exercise" update .
 ```
 
-# Code style, linting
+## Code style, linting
 
 - `eslint` is used for linting. The configuration used is an extension of `create-react-app`s eslint config, plus the prettier plugin.
 - `prettier` is used for automatically formatting JS code (thus giving the closest `go fmt` equivalent that seems to exist).
