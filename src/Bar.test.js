@@ -25,8 +25,8 @@ it("renders the percentage", () => {
     { value: 231, limit: 230, percentage: "100%" },
     { value: 235, limit: 230, percentage: "102%" }
   ];
-  for (const t of tests) {
-    const wrapper = mount(<Bar value={t.value} limit={t.limit} />);
-    expect(wrapper.text()).toEqual(t.percentage);
+  for (const tt of tests) {
+    const wrapper = mount(<Bar value={tt.value} limit={tt.limit} />);
+    expect(wrapper.text()).toEqual(tt.percentage);
   }
 });

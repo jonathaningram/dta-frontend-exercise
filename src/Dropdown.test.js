@@ -21,12 +21,12 @@ it("renders the correct options", () => {
     { value: 1, bars: [ 53, 63, 73 ], label: "#progress2" },
     { value: 2, bars: [ 53, 63, 73 ], label: "#progress3" }
   ];
-  for (const t of tests) {
+  for (const tt of tests) {
     const wrapper = render(
-      <Dropdown value={t.value} bars={t.bars} onChange={noop} />
+      <Dropdown value={tt.value} bars={tt.bars} onChange={noop} />
     );
-    expect(wrapper.find("select [selected]").text()).toEqual(t.label);
-    expect(wrapper.find("option").length).toEqual(t.bars.length);
+    expect(wrapper.find("select [selected]").text()).toEqual(tt.label);
+    expect(wrapper.find("option").length).toEqual(tt.bars.length);
   }
 });
 

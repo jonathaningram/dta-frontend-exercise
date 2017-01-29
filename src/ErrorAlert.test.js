@@ -13,8 +13,8 @@ it("renders the message", () => {
     { message: "The error message." },
     { message: "Another error message." }
   ];
-  for (const t of tests) {
-    const wrapper = mount(<ErrorAlert message={t.message} />);
-    expect(wrapper.text()).toEqual(t.message);
+  for (const tt of tests) {
+    const wrapper = mount(<ErrorAlert message={tt.message} />);
+    expect(wrapper.text()).toEqual(tt.message);
   }
 });

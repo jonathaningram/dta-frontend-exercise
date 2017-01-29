@@ -21,9 +21,9 @@ it("renders the label", () => {
     { delta: -50, label: "-50" },
     { delta: -230, label: "-230" }
   ];
-  for (const t of tests) {
-    const wrapper = mount(<Button delta={t.delta} onClick={noop} />);
-    expect(wrapper.text()).toEqual(t.label);
+  for (const tt of tests) {
+    const wrapper = mount(<Button delta={tt.delta} onClick={noop} />);
+    expect(wrapper.text()).toEqual(tt.label);
   }
 });
 
