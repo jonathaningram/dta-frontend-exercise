@@ -31,6 +31,7 @@ const StyledButton = styled(Button)`
   `}
 `;
 
+// Controls groups and lays out the dropdown and button controls.
 class Controls extends Component {
   render() {
     const {

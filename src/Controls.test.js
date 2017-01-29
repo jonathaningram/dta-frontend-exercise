@@ -10,8 +10,8 @@ it("renders without crashing", () => {
   ReactDOM.render(
     <Controls
       activeBar={0}
-      bars={[]}
-      buttons={[]}
+      bars={[ 5, 10 ]}
+      buttons={[ -1, 1 ]}
       onActiveBarChange={noop}
       onDeltaChange={noop}
     />,
