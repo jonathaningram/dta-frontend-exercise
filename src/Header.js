@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { media } from "./style-utils";
 import logo from "./logo.svg";
 
 const Wrapper = styled.div`
@@ -9,7 +10,17 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 80px;
+  height: 60px;
+  ${media.small`
+    height: 80px;
+  `}
+`;
+
+const Heading = styled.h2`
+  font-size: 1.25rem;
+  ${media.small`
+    font-size: 1.5rem;
+  `}
 `;
 
 class Header extends Component {
@@ -20,7 +31,7 @@ class Header extends Component {
           src={logo}
           alt="Australian Government - Digital Transformation Agency"
         />
-        <h2>{`“Digitally Transformed Bars”`}</h2>
+        <Heading>{`“Digitally Transformed Bars”`}</Heading>
       </Wrapper>
     );
   }
