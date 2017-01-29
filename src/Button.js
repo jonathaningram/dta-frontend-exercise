@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { media } from "./style-utils";
 
 const color = "#666";
 
@@ -20,10 +19,6 @@ const StyledButton = styled.button`
   vertical-align: middle;
   transition: all .2s ease-in-out;
   user-select: none;
-  ${media.small`
-    display: inline-block;
-    width: auto;
-  `}
 `;
 
 class Button extends Component {
