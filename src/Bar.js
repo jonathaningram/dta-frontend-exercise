@@ -26,6 +26,7 @@ const Text = styled.div`
   line-height: ${height};
 `;
 
+// Bar is an individual progress bar.
 class Bar extends Component {
   percentage() {
     const { value, limit } = this.props;

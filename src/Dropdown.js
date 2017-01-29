@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { media } from "./style-utils";
 
 const Select = styled.select`
   display: block;
@@ -18,10 +17,6 @@ const Select = styled.select`
   -moz-appearance: none;
   -webkit-appearance: none;
   font-size: 100%;
-  ${media.small`
-    display: inline-block;
-    width: auto;
-  `}
 `;
 
 class Dropdown extends Component {
