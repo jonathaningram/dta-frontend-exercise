@@ -15,7 +15,7 @@ After checking out the code, the following commands will get the dev server runn
 ```sh
 npm install
 REACT_APP_BARS_ENDPOINT="http://frontend-exercise.apps.staging.digital.gov.au/bars" \
-    npm run start
+npm run start
 ```
 
 ## Test
